@@ -81,5 +81,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-w -s" -o gateway .
 # 暴露端口 
 EXPOSE 8080 
  
-# 启动命令 
-CMD ["/app/gateway"]
+# 启动命令
+ENTRYPOINT ["/app/gateway"]
+CMD ["-port", "8080", "-serviceA", "svc_a:50050"]
