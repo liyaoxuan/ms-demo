@@ -1,0 +1,48 @@
+// service.proto
+syntax = "proto3";
+
+option go_package = "github.com/liyaoxuan/ms-demo/services/proto";
+package demo;
+
+// 服务 A 的 RPC 接口
+service ServiceA {
+  rpc Compute (RequestA) returns (ResponseA);
+}
+
+// 服务 B 的 RPC 接口
+service ServiceB {
+  rpc Compute (RequestB) returns (ResponseB);
+}
+
+// 服务 C 的 RPC 接口
+service ServiceC {
+  rpc Compute (RequestC) returns (ResponseC);
+}
+
+// 请求和响应消息类型
+message RequestA {
+  int32 time_a = 1;
+  int32 time_b = 2;
+  int32 time_c = 3;
+}
+
+message ResponseA {
+  bool success = 1;
+}
+
+message RequestB {
+  int32 time_b = 1;
+  int32 time_c = 2;
+}
+
+message ResponseB {
+  bool success = 1;
+}
+
+message RequestC {
+  int32 time_c = 1;
+}
+
+message ResponseC {
+  bool success = 1;
+}
