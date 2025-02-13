@@ -2,6 +2,7 @@
 syntax = "proto3";
 
 option go_package = "github.com/liyaoxuan/ms-demo/services/proto";
+package demo;
 
 // 服务 A 的 RPC 接口
 service ServiceA {
